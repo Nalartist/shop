@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalartist's Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="imagenes/logo.jpeg">
+</head>
+<body>
+
+    <!--Inicio bloque de barra superior-->
+    <nav>
+        <a href="#" class="logo"><span>Nalartist</span></a>
+
+        <ul class="links">
+            <a href="#home">Inicio</a>
+            <a href="#about">Sobre Mí</a>
+            <a href="#services">Mis Dibujos</a>
+            <a href="#contact">Contacto</a>
+        </ul>
+    
+        <i class='bx bx-menu-alt-right' id="menu"></i>
+    
+        <a href="#contact" class="btn">Contactame</a>
+
+    </nav>
+    <!--Fin bloque de barra superior-->
+    
+    <!--Inicio sección home-->
+    <section id="home">
+        <img src="imagenes/logo.jpeg" alt="">
+
+        <div class="info-box">
+            <h1><span>Hola, soy Nala</span></h1>
+            <h3><span>Pintora</span> de Burgos</h3>
+            <p>Soy una chica a la que la gusta pintar y hacer dibujos de todo tipo, ya sea con acuarelas, oleo, etc. </p>
+        </div>
+
+        <!-- <div class="btn-box">
+            <div class="btn">Hire</div>
+            <div class="btn">Contact Me</div>
+        </div> -->
+    </section>
+    <!--Fin sección home-->
+
+    <!--Inicio sección about-->
+    <section id="about">
+        <div class="about-box">
+
+            <div class="about-info">
+                <h1><span>Sobre Mí</span></h1>
+                <p>Soy una chica a la que la gusta pintar y hacer dibujos de todo tipo, ya sea con acuarelas, oleo, etc. </p>
+            </div>
+
+            <h2><span>Skills</span></h2>
+
+            <div class="skills">
+                <ul>
+                    <li>
+                        <span><i class='bx bx-chevron-right' ></i> Acuarelas</span>
+                    </li>
+
+                    <li>
+                        <span><i class='bx bx-chevron-right' ></i> Oleo</span>
+                    </li>
+
+                    <!-- <li>
+                        <span><i class='bx bx-chevron-right' ></i> Dibujo</span>
+                    </li> -->
+                </ul>
+
+                <ul>
+                    <li>
+                        <span><i class='bx bx-chevron-right' ></i> Dibujo</span>
+                    </li>
+
+                    <li>
+                        <span><i class='bx bx-chevron-right' ></i> Pintura</span>
+                    </li>
+                    
+                    <!-- <li>
+                        <span><i class='bx bx-chevron-right' ></i> MySQL</span>
+                    </li> -->
+                </ul>
+
+            </div>
+        </div>
+
+        <img src="imagenes/logo.jpeg" alt="">
+    </section>
+    <!--Fin sección about-->
+
+    <!--Inicio sección dibujos-->
+    <section id="dibujos">
+        <h1 class="header"><span>Mis Dibujos</span></h1>
+
+        <div class="dibujos-container">
+
+            <div class="box">
+                <img src="imagenes/carretera.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="imagenes/hielo.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="imagenes/lienzo_paisaje.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="imagenes/dragon.jpg" alt="">
+            </div>
+
+        </div>
+
+        <button type="submit" class="dibus">Pasar a la galería de fotos</button>
+    </section>
+    <!--Fin sección dibujos-->
+
+    <!-- Inicio sección contact-->
+    <section id="contact">
+        <h1 class="header"><span>Contacto</span></h1>
+    
+        <form action="enviar_email.php" method="POST">
+            <div class="input-box">
+                <span>Nombre Completo</span>
+                <input type="text" name="nombre" placeholder="Introduce tu nombre" required>
+            </div>
+            <div class="input-box">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Introduce tu Email" required>
+            </div>
+            <div class="input-box">
+                <span>Tu Mensaje</span>
+                <textarea name="mensaje" placeholder="Introduce tu mensaje" required></textarea>
+            </div>
+    
+            <button type="submit" class="boton">Enviar</button>
+        </form>
+    </section>
+    
+    <!--Fin sección contact -->
+
+    <!--Inicio del footer-->
+    <footer>
+        <div class="col-left">
+            <div class="col-box">
+                <span><i class='bx bxs-location-plus' ></i></span>
+                <span>1234 Maple Street Springfield, IL 62701</span>
+            </div>
+
+            <div class="col-box">
+                <span><i class='bx bxs-phone' ></i></span>
+                <span>+1 234 567819</span>
+            </div>
+            
+            <div class="col-box">
+                <span><i class='bx bxs-envelope' ></i></span>
+                <span>nalartist@gmail.com</span>
+            </div>
+
+        </div>
+        <div class="col-right">
+            <span>Sobre mis servicios</span>
+            <p>Soy una chica a la que la gusta pintar y hacer dibujos de todo tipo, ya sea con acuarelas, oleo, etc.</p>
+
+            <div class="social-icons">
+                    <a href="https://tiktok.com/@nalartist">
+                        <span><i class='bx bxl-tiktok'></i></span>
+                    </a>
+                    <a href="https://www.instagram.com/nalartistt/">
+                    <span><i class='bx bxl-instagram-alt'></i></span>
+                    </a>
+                    <!-- <i class='bx bxl-linkedin-square' ></i>
+                    <i class='bx bxl-github' ></i> -->
+            </div>
+        </div>
+    </footer>
+    <!--FIN del footer-->
+
+    <script src="script.js"></script>
+</body>
+</html>
