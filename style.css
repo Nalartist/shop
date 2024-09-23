@@ -208,19 +208,19 @@ section{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
 }
-.box{
+.box {
+    position: relative;
     border: 3px solid rgb(151, 6, 151);
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible; /* Permitir que la imagen se desborde */
     object-fit: cover;
-    padding: 0em;
+    padding: 0;
     gap: 2em;
-    color: rgb(60, 60, 51);
     cursor: pointer;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .box:hover{
     border: 3px solid rgb(100, 100, 100);
@@ -231,11 +231,47 @@ section{
 .box h1{
     font-size: 2em;
 }
-.box img{
+.box img {
     min-width: 25px;
-    border-radius: 0em;
+    border-radius: 0.3em;
     width: 100%;
+    transition: transform 0.3s ease-in-out;
 }
+.box:hover img {
+    transform: scale(1.1); /* Escalar la imagen al pasar por encima */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
 
 #contact{
     background-color: var(--second-background);
@@ -288,26 +324,7 @@ form textarea{
     background-position: right center;
     color: var(--background);
 }
-.dibus{
-    padding: 0.5em 1em;
-    color: white;
-    background-image: linear-gradient(to right, #0052af, #ce0fcb);
-    background-size: 200%;
-    background-position: left center;
-    font-weight: 400;
-    letter-spacing: 1px;
-    border-radius: 0.5em;
-    font-size: 1.1em;
-    border: 2px solid var(--second-background);
-    cursor: pointer;
-    transition: background-position 0.5s ease-in-out, color 0.3s ease-in-out;
-    display: block;
-    margin: 50px auto;
-}
-.dibus:hover{
-    background-position: right center;
-    color: var(--background);
-}
+
 form input:focus{
     background: rgb(229, 229, 229);
 }
@@ -432,6 +449,18 @@ footer{
     #home img{
         width: 32vw;
     }
+    #about{
+        flex-direction: column;
+    }
+    #about img{
+        width: 42vw;
+    }
+    #about h1{
+        font-size: 3em;
+    }
+    #about ul{
+        font-size: 1em;
+    }
 
     #dibujos .skills{
         gap: 3em;
@@ -450,6 +479,78 @@ footer{
     }
     .input-box input{
         padding: 0.5em 1em;
+    }
+    footer{
+        flex-direction: column;
+        gap: 5em;
+        align-items: baseline;
+    }
+}
+@media(max-width:470px){
+    #home h1{
+        font-size: 2.5em;
+    }
+    #home h3{
+        font-size: 1.5em;
+    }
+    #home img{
+        width: 32vw;
+    }
+    #about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center; 
+    }
+    #about h1 {
+        font-size: 3em; 
+        margin: 0.5em 0; 
+    }
+    #about span{
+        font-size: 1em;
+    }
+    #about p {
+        font-size: 1em;
+        margin: 0.5em 0; 
+        line-height: 1.4;
+    }
+    #about img {
+        width: 40vw; 
+        margin: 1em 0; 
+        display: block;
+    }
+    #about ul {
+        font-size: 1.1em; 
+        margin: 1em 0;
+        padding: 0;
+        list-style-type: none; 
+        text-align: center; 
+        gap: 2em;
+    }
+    #about div .skills{
+        gap: 3em;
+    }
+
+    #dibujos .skills{
+        gap: 3em;
+    }
+
+    #dibujos .header{
+        font-size: 3em;
+    }
+
+    #contact .header{
+        font-size: 3em;
+    }
+
+    #contact .input-box span{
+        font-size: 1.2em;
+    }
+    .input-box input{
+        padding: 0.5em 1em;
+    }
+    .input-box textarea {
+        padding: 0.5em 2.2em;
     }
     footer{
         flex-direction: column;
