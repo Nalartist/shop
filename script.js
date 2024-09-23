@@ -17,3 +17,31 @@ menuItems.forEach(item => {
         }
     };
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.querySelector('.modal-close');
+    const images = document.querySelectorAll('.box img');
+
+    // Abre el modal con la imagen clickeada
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.classList.add('active');
+            modalImg.src = this.src;
+        });
+    });
+
+    // Cierra el modal
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+    });
+
+    // Cierra el modal si se hace clic fuera de la imagen
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+});
